@@ -14,6 +14,7 @@
 - [Overview](#overview)
 - [Features](#features)
 - [Quick Start](#quick-start)
+- [For AI Coding Agents](#for-ai-coding-agents)
 - [Installation](#installation)
 - [Configuration](#configuration)
 - [Usage](#usage)
@@ -56,8 +57,8 @@ Perfect for developers, creators, and teams looking to maximize productivity thr
 
 ```bash
 # Clone the repository
-git clone https://github.com/vkumar-dev/ai-work-generator-framework.git
-cd ai-work-generator-framework
+git clone https://github.com/vkumar-dev/github-work-generator.git
+cd github-work-generator
 
 # Install dependencies (optional, for GUI mode)
 pip install -r requirements.txt
@@ -72,6 +73,26 @@ cp config.example.sh config.sh
 # Or run with GUI (requires PyQt5)
 USE_GUI=true ./workgenerator.sh
 ```
+
+---
+
+## 🤖 For AI Coding Agents
+
+**Want an AI agent to implement this framework for you?**
+
+We provide ready-to-use prompts for AI coding agents (Claude, Cursor, Copilot, etc.):
+
+1. **Quick Implementation:** Copy `AGENT-IMPLEMENTATION-PROMPT.md` and paste into your AI agent
+2. **Detailed Guide:** Share `AGENT.md` for comprehensive implementation instructions
+3. **Reference:** Point agent to this repository for existing code samples
+
+The AI agent will:
+- Clone this repository
+- Read the prompt files
+- Implement the framework step by step
+- Create documentation and tests
+
+📖 **See:** [`AGENT.md`](AGENT.md) for the full implementation guide.
 
 ---
 
