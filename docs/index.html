@@ -152,46 +152,163 @@
     <section id="quickstart" class="quickstart">
         <div class="container">
             <h2 class="section-title">Quick Start</h2>
-            <p class="section-subtitle">Get up and running in 3 steps</p>
-            
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>Clone the Repository</h3>
-                    <div class="code-block">
-                        <pre><code>git clone https://github.com/vkumar-dev/ai-work-generator-framework.git
-cd ai-work-generator-framework</code></pre>
+            <p class="section-subtitle">Choose your implementation method</p>
+
+            <!-- Option 1: AI Agent -->
+            <div class="option-card featured">
+                <div class="option-header">
+                    <span class="option-badge">Recommended</span>
+                    <h3>🤖 AI Agent Implementation</h3>
+                </div>
+                <p class="option-description">
+                    Have an AI coding agent (Claude, Cursor, Copilot) implement this framework for you.
+                    Just copy the prompt below and paste it into your AI agent.
+                </p>
+                
+                <div class="prompt-box">
+                    <div class="prompt-header">
+                        <span class="prompt-title">📋 Implementation Prompt</span>
+                        <button class="copy-btn" onclick="copyPrompt()">
+                            <span class="copy-icon">📋</span>
+                            <span class="copy-text">Copy Prompt</span>
+                        </button>
+                    </div>
+                    <div class="prompt-content" id="implementation-prompt">
+I need you to implement the GitHub Work Generator framework.
+
+📦 Repository: https://github.com/vkumar-dev/github-work-generator
+
+## What This Framework Does
+
+The GitHub Work Generator is an AI-powered automation framework that:
+1. Analyzes GitHub repositories using `gh cli`
+2. Generates project ideas using AI (qwen, ollama, etc.)
+3. Presents ideas via terminal or GUI interface
+4. Executes approved ideas through automated workflows
+5. Rests between cycles for sustainable automation
+
+## Your Implementation Tasks
+
+### Phase 1: Setup
+1. Clone: git clone https://github.com/vkumar-dev/github-work-generator.git
+2. Read: AGENT.md for detailed implementation guide
+3. Read: prompts/*.prompt.md for AI templates
+4. Set up the directory structure
+
+### Phase 2: Core Implementation
+1. Create workgenerator.sh with:
+   - GitHub analysis using gh cli
+   - AI idea generation with configurable prompts
+   - User decision interface (YES/NO/PASS/IMPROVE)
+   - Task planning and execution
+   - State persistence (.workgenerator_config, .ideas_log.json)
+   - Main loop with configurable rest periods
+
+2. Create config.example.sh with:
+   - GOAL variable
+   - QWEN_BIN (AI CLI command)
+   - REST_SECONDS (default: 14400)
+   - UI options (USE_GUI, WORKGENERATOR_APP_GUI)
+   - Technology preferences
+
+3. Create prompts/:
+   - github-analysis.prompt.md
+   - idea-generation.prompt.md
+   - implementation-plan.prompt.md
+   - load-prompts.sh
+
+### Phase 3: Optional GUI
+Create workgenerator-desktop.py (PyQt5):
+- Dark themed UI with split layout
+- Live terminal output panel
+- Decision buttons (Approve/Reject/Pass/Improve)
+- Status indicators and glow effects
+
+### Phase 4: Documentation
+1. Create docs/ for GitHub Pages:
+   - index.html (hero, features, quick start, examples)
+   - styles.css (dark theme)
+   - script.js (animations)
+
+2. Update README.md with:
+   - Project overview
+   - Quick start guide
+   - Configuration reference
+   - Usage examples
+
+### Phase 5: Testing & Deployment
+1. Test: WG_SINGLE_RUN=true ./workgenerator.sh
+2. Create .github/workflows/deploy-pages.yml
+3. Add LICENSE (MIT)
+4. Add .gitignore
+
+## Acceptance Criteria
+
+- [ ] ./workgenerator.sh runs without errors
+- [ ] GitHub analysis fetches real data via gh cli
+- [ ] AI generates formatted project ideas
+- [ ] User can make decisions (Y/N/PASS/IMPROVE)
+- [ ] State persists across restarts
+- [ ] Documentation is complete
+
+## Questions?
+
+Ask me for clarification on any requirement.
+Reference files in the repo for existing code samples.
+                    </div>
+                    <div class="copy-feedback" id="copy-feedback">✓ Copied!</div>
+                </div>
+                
+                <div class="option-steps">
+                    <div class="mini-step">
+                        <span class="step-dot">1</span>
+                        <span>Click "Copy Prompt"</span>
+                    </div>
+                    <div class="mini-step">
+                        <span class="step-dot">2</span>
+                        <span>Paste into AI agent (Claude, Cursor, Copilot)</span>
+                    </div>
+                    <div class="mini-step">
+                        <span class="step-dot">3</span>
+                        <span>Let the agent implement everything</span>
                     </div>
                 </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>Install Dependencies</h3>
-                    <div class="code-block">
-                        <pre><code># Install GitHub CLI
-sudo apt install gh  # or brew install gh
+            </div>
 
-# Authenticate
-gh auth login
-
-# Optional: Python dependencies for GUI
-pip install -r requirements.txt</code></pre>
-                    </div>
+            <!-- Option 2: Manual -->
+            <div class="option-card">
+                <div class="option-header">
+                    <h3>🔧 Manual Implementation</h3>
                 </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>Configure & Run</h3>
-                    <div class="code-block">
-                        <pre><code># Copy config template
-cp config.example.sh config.sh
-
-# Edit with your settings
-nano config.sh
-
-# Run in terminal mode
-./workgenerator.sh
-
-# Or with GUI
-USE_GUI=true ./workgenerator.sh</code></pre>
+                <p class="option-description">
+                    Prefer to implement yourself? Follow these 3 steps:
+                </p>
+                
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Clone the Repository</h3>
+                        <div class="code-block">
+                            <pre><code>git clone https://github.com/vkumar-dev/github-work-generator.git
+cd github-work-generator</code></pre>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Configure Settings</h3>
+                        <div class="code-block">
+                            <pre><code>cp config.example.sh config.sh
+nano config.sh  # Edit your settings</code></pre>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Run the Framework</h3>
+                        <div class="code-block">
+                            <pre><code>./workgenerator.sh                    # Terminal mode
+# OR
+USE_GUI=true ./workgenerator.sh       # GUI mode</code></pre>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -97,6 +97,31 @@ function toggleMobileMenu() {
 }
 
 // Console welcome message
-console.log('%c🚀 AI Work Generator Framework', 'font-size: 20px; font-weight: bold; color: #6be8ff;');
-console.log('%cBuild amazing projects with AI-powered automation', 'font-size: 12px; color: #8da2c9;');
-console.log('%cLearn more: https://github.com/vkumar-dev/ai-work-generator-framework', 'font-size: 10px; color: #5f749d;');
+console.log('%c🚀 GitHub Work Generator', 'font-size: 20px; font-weight: bold; color: #6be8ff;');
+console.log('%cAI-powered automation for GitHub projects', 'font-size: 12px; color: #8da2c9;');
+console.log('%cLearn more: https://github.com/vkumar-dev/github-work-generator', 'font-size: 10px; color: #5f749d;');
+
+// Copy implementation prompt
+function copyPrompt() {
+    const promptContent = document.getElementById('implementation-prompt');
+    const feedback = document.getElementById('copy-feedback');
+    const copyBtn = document.querySelector('.copy-btn');
+    
+    navigator.clipboard.writeText(promptContent.textContent.trim()).then(() => {
+        // Show feedback
+        feedback.classList.add('show');
+        copyBtn.innerHTML = '<span class="copy-icon">✓</span><span class="copy-text">Copied!</span>';
+        
+        setTimeout(() => {
+            feedback.classList.remove('show');
+            copyBtn.innerHTML = '<span class="copy-icon">📋</span><span class="copy-text">Copy Prompt</span>';
+        }, 2000);
+    }).catch(err => {
+        console.error('Failed to copy:', err);
+        feedback.textContent = '✗ Failed to copy';
+        feedback.classList.add('show');
+        setTimeout(() => {
+            feedback.classList.remove('show');
+        }, 2000);
+    });
+}
