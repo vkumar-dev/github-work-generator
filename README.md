@@ -14,7 +14,8 @@
 - [Overview](#overview)
 - [Features](#features)
 - [Quick Start](#quick-start)
-- [For AI Coding Agents](#for-ai-coding-agents)
+  - [Option 1: AI Agent Implementation](#option-1-ai-agent-implementation-recommended)
+  - [Option 2: Manual Implementation](#option-2-manual-implementation)
 - [Installation](#installation)
 - [Configuration](#configuration)
 - [Usage](#usage)
@@ -55,44 +56,123 @@ Perfect for developers, creators, and teams looking to maximize productivity thr
 
 ## 🚀 Quick Start
 
-```bash
-# Clone the repository
-git clone https://github.com/vkumar-dev/github-work-generator.git
-cd github-work-generator
+### Option 1: AI Agent Implementation (Recommended)
 
-# Install dependencies (optional, for GUI mode)
-pip install -r requirements.txt
+**Have an AI coding agent implement this framework for you:**
 
-# Configure your settings
-cp config.example.sh config.sh
-# Edit config.sh with your preferences
+1. **Copy the prompt** below (click the copy button)
+2. **Paste into your AI agent** (Claude, Cursor, GitHub Copilot, etc.)
+3. **Let the agent implement** the entire framework
 
-# Run in terminal mode
-./workgenerator.sh
+<details>
+<summary>📋 <strong>Copy Implementation Prompt</strong> (Click to expand)</summary>
 
-# Or run with GUI (requires PyQt5)
-USE_GUI=true ./workgenerator.sh
 ```
+I need you to implement the GitHub Work Generator framework.
+
+📦 Repository: https://github.com/vkumar-dev/github-work-generator
+
+## What This Framework Does
+
+The GitHub Work Generator is an AI-powered automation framework that:
+1. Analyzes GitHub repositories using `gh cli`
+2. Generates project ideas using AI (qwen, ollama, etc.)
+3. Presents ideas via terminal or GUI interface
+4. Executes approved ideas through automated workflows
+5. Rests between cycles for sustainable automation
+
+## Your Implementation Tasks
+
+### Phase 1: Setup
+1. Clone: git clone https://github.com/vkumar-dev/github-work-generator.git
+2. Read: AGENT.md for detailed implementation guide
+3. Read: prompts/*.prompt.md for AI templates
+4. Set up the directory structure
+
+### Phase 2: Core Implementation
+1. Create workgenerator.sh with:
+   - GitHub analysis using gh cli
+   - AI idea generation with configurable prompts
+   - User decision interface (YES/NO/PASS/IMPROVE)
+   - Task planning and execution
+   - State persistence (.workgenerator_config, .ideas_log.json)
+   - Main loop with configurable rest periods
+
+2. Create config.example.sh with:
+   - GOAL variable
+   - QWEN_BIN (AI CLI command)
+   - REST_SECONDS (default: 14400)
+   - UI options (USE_GUI, WORKGENERATOR_APP_GUI)
+   - Technology preferences
+
+3. Create prompts/:
+   - github-analysis.prompt.md
+   - idea-generation.prompt.md
+   - implementation-plan.prompt.md
+   - load-prompts.sh
+
+### Phase 3: Optional GUI
+Create workgenerator-desktop.py (PyQt5):
+- Dark themed UI with split layout
+- Live terminal output panel
+- Decision buttons (Approve/Reject/Pass/Improve)
+- Status indicators and glow effects
+
+### Phase 4: Documentation
+1. Create docs/ for GitHub Pages:
+   - index.html (hero, features, quick start, examples)
+   - styles.css (dark theme)
+   - script.js (animations)
+
+2. Update README.md with:
+   - Project overview
+   - Quick start guide
+   - Configuration reference
+   - Usage examples
+
+### Phase 5: Testing & Deployment
+1. Test: WG_SINGLE_RUN=true ./workgenerator.sh
+2. Create .github/workflows/deploy-pages.yml
+3. Add LICENSE (MIT)
+4. Add .gitignore
+
+## Acceptance Criteria
+
+- [ ] ./workgenerator.sh runs without errors
+- [ ] GitHub analysis fetches real data via gh cli
+- [ ] AI generates formatted project ideas
+- [ ] User can make decisions (Y/N/PASS/IMPROVE)
+- [ ] State persists across restarts
+- [ ] Documentation is complete
+
+## Questions?
+
+Ask me for clarification on any requirement.
+Reference files in the repo for existing code samples.
+```
+
+</details>
 
 ---
 
-## 🤖 For AI Coding Agents
+### Option 2: Manual Implementation
 
-**Want an AI agent to implement this framework for you?**
+If you prefer to implement manually:
 
-We provide ready-to-use prompts for AI coding agents (Claude, Cursor, Copilot, etc.):
+```bash
+# Step 1: Clone
+git clone https://github.com/vkumar-dev/github-work-generator.git
+cd github-work-generator
 
-1. **Quick Implementation:** Copy `AGENT-IMPLEMENTATION-PROMPT.md` and paste into your AI agent
-2. **Detailed Guide:** Share `AGENT.md` for comprehensive implementation instructions
-3. **Reference:** Point agent to this repository for existing code samples
+# Step 2: Configure
+cp config.example.sh config.sh
+nano config.sh  # Edit your settings
 
-The AI agent will:
-- Clone this repository
-- Read the prompt files
-- Implement the framework step by step
-- Create documentation and tests
-
-📖 **See:** [`AGENT.md`](AGENT.md) for the full implementation guide.
+# Step 3: Run
+./workgenerator.sh                    # Terminal mode
+# OR
+USE_GUI=true ./workgenerator.sh       # GUI mode
+```
 
 ---
 
@@ -121,8 +201,8 @@ gh auth login
 ### Step 2: Clone the Repository
 
 ```bash
-git clone https://github.com/vkumar-dev/ai-work-generator-framework.git
-cd ai-work-generator-framework
+git clone https://github.com/vkumar-dev/github-work-generator.git
+cd github-work-generator
 ```
 
 ### Step 3: Install Optional Dependencies
