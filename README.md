@@ -1,9 +1,11 @@
-# AI Work Generator Framework
+# GitHub Work Generator
 
-🚀 **AI-powered automation framework that analyzes your projects, generates actionable ideas, and automates execution.**
+🚀 **AI-powered automation framework that analyzes your GitHub projects, generates actionable ideas, and automates execution.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub stars](https://img.shields.io/github/stars/vkumar-dev/ai-work-generator-framework)](https://github.com/vkumar-dev/ai-work-generator-framework/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/vkumar-dev/github-work-generator)](https://github.com/vkumar-dev/github-work-generator/stargazers)
+
+> **Note:** This project is not affiliated with GitHub Inc. GitHub is a registered trademark of GitHub, Inc.
 
 ---
 
@@ -25,7 +27,7 @@
 
 ## 🎯 Overview
 
-The AI Work Generator is an intelligent automation framework that:
+The GitHub Work Generator is an intelligent automation framework that:
 
 1. **Analyzes** your project portfolio using GitHub CLI
 2. **Generates** high-impact project ideas using AI
@@ -360,9 +362,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-- **Documentation**: https://vkumar-dev.github.io/ai-work-generator-framework
-- **Issues**: https://github.com/vkumar-dev/ai-work-generator-framework/issues
-- **Discussions**: https://github.com/vkumar-dev/ai-work-generator-framework/discussions
+- **Documentation**: https://vkumar-dev.github.io/github-work-generator
+- **Issues**: https://github.com/vkumar-dev/github-work-generator/issues
+- **Discussions**: https://github.com/vkumar-dev/github-work-generator/discussions
 
 ---
 
