@@ -104,24 +104,39 @@ console.log('%cLearn more: https://github.com/vkumar-dev/github-work-generator',
 // Copy implementation prompt
 function copyPrompt() {
     const promptContent = document.getElementById('implementation-prompt');
-    const feedback = document.getElementById('copy-feedback');
-    const copyBtn = document.querySelector('.copy-btn');
+    const success = document.getElementById('copy-success');
+    const copyBtn = document.querySelector('.copy-button');
+    const copyLabel = copyBtn.querySelector('.copy-label');
     
     navigator.clipboard.writeText(promptContent.textContent.trim()).then(() => {
-        // Show feedback
-        feedback.classList.add('show');
-        copyBtn.innerHTML = '<span class="copy-icon">✓</span><span class="copy-text">Copied!</span>';
+        // Show success message
+        success.classList.add('show');
+        copyLabel.textContent = 'Copied!';
         
         setTimeout(() => {
-            feedback.classList.remove('show');
-            copyBtn.innerHTML = '<span class="copy-icon">📋</span><span class="copy-text">Copy Prompt</span>';
-        }, 2000);
+            success.classList.remove('show');
+            copyLabel.textContent = 'Copy Prompt';
+        }, 2500);
     }).catch(err => {
         console.error('Failed to copy:', err);
-        feedback.textContent = '✗ Failed to copy';
-        feedback.classList.add('show');
+        success.innerHTML = '<span>✗ Failed to copy</span>';
+        success.classList.add('show');
         setTimeout(() => {
-            feedback.classList.remove('show');
-        }, 2000);
+            success.classList.remove('show');
+        }, 2500);
     });
+}
+
+// Toggle manual implementation section
+function toggleManual() {
+    const manualSection = document.getElementById('manual-section');
+    const chevron = document.querySelector('.toggle-chevron');
+    
+    if (manualSection.style.display === 'none') {
+        manualSection.style.display = 'block';
+        chevron.style.transform = 'rotate(180deg)';
+    } else {
+        manualSection.style.display = 'none';
+        chevron.style.transform = 'rotate(0deg)';
+    }
 }

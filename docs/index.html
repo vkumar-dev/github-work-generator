@@ -152,29 +152,34 @@
     <section id="quickstart" class="quickstart">
         <div class="container">
             <h2 class="section-title">Quick Start</h2>
-            <p class="section-subtitle">Choose your implementation method</p>
+            <p class="section-subtitle">Let AI implement this for you</p>
 
-            <!-- Option 1: AI Agent -->
-            <div class="option-card featured">
-                <div class="option-header">
-                    <span class="option-badge">Recommended</span>
-                    <h3>🤖 AI Agent Implementation</h3>
-                </div>
-                <p class="option-description">
-                    Have an AI coding agent (Claude, Cursor, Copilot) implement this framework for you.
-                    Just copy the prompt below and paste it into your AI agent.
-                </p>
-                
-                <div class="prompt-box">
-                    <div class="prompt-header">
-                        <span class="prompt-title">📋 Implementation Prompt</span>
-                        <button class="copy-btn" onclick="copyPrompt()">
-                            <span class="copy-icon">📋</span>
-                            <span class="copy-text">Copy Prompt</span>
-                        </button>
+            <!-- AI Agent Option (Primary) -->
+            <div class="quickstart-primary">
+                <div class="ai-agent-card">
+                    <div class="ai-agent-header">
+                        <div class="ai-agent-icon">🤖</div>
+                        <div class="ai-agent-text">
+                            <h3>Implement with AI Agent</h3>
+                            <p>Copy the prompt below and paste into Claude, Cursor, or GitHub Copilot</p>
+                        </div>
                     </div>
-                    <div class="prompt-content" id="implementation-prompt">
-I need you to implement the GitHub Work Generator framework.
+                    
+                    <div class="prompt-container">
+                        <div class="prompt-toolbar">
+                            <div class="prompt-info">
+                                <span class="prompt-label">📋 Implementation Prompt</span>
+                                <span class="prompt-repo">📦 https://github.com/vkumar-dev/github-work-generator</span>
+                            </div>
+                            <button class="copy-button" onclick="copyPrompt()">
+                                <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg>
+                                <span class="copy-label">Copy Prompt</span>
+                            </button>
+                        </div>
+                        <div class="prompt-code" id="implementation-prompt">I need you to implement the GitHub Work Generator framework.
 
 📦 Repository: https://github.com/vkumar-dev/github-work-generator
 
@@ -254,60 +259,78 @@ Create workgenerator-desktop.py (PyQt5):
 ## Questions?
 
 Ask me for clarification on any requirement.
-Reference files in the repo for existing code samples.
+Reference files in the repo for existing code samples.</div>
+                        <div class="copy-success" id="copy-success">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Copied to clipboard!</span>
+                        </div>
                     </div>
-                    <div class="copy-feedback" id="copy-feedback">✓ Copied!</div>
-                </div>
-                
-                <div class="option-steps">
-                    <div class="mini-step">
-                        <span class="step-dot">1</span>
-                        <span>Click "Copy Prompt"</span>
-                    </div>
-                    <div class="mini-step">
-                        <span class="step-dot">2</span>
-                        <span>Paste into AI agent (Claude, Cursor, Copilot)</span>
-                    </div>
-                    <div class="mini-step">
-                        <span class="step-dot">3</span>
-                        <span>Let the agent implement everything</span>
+
+                    <div class="how-it-works">
+                        <div class="step-item">
+                            <div class="step-num">1</div>
+                            <div class="step-text">Click <strong>Copy Prompt</strong></div>
+                        </div>
+                        <div class="step-arrow">→</div>
+                        <div class="step-item">
+                            <div class="step-num">2</div>
+                            <div class="step-text">Paste into <strong>Claude, Cursor, or Copilot</strong></div>
+                        </div>
+                        <div class="step-arrow">→</div>
+                        <div class="step-item">
+                            <div class="step-num">3</div>
+                            <div class="step-text">Let AI <strong>implement everything</strong></div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Option 2: Manual -->
-            <div class="option-card">
-                <div class="option-header">
+            <!-- Manual Option (Hidden by default) -->
+            <div class="manual-toggle">
+                <button onclick="toggleManual()">
+                    <span class="toggle-icon">⚙️</span>
+                    <span>Prefer manual implementation?</span>
+                    <svg class="toggle-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="manual-section" id="manual-section" style="display: none;">
+                <div class="manual-card">
                     <h3>🔧 Manual Implementation</h3>
-                </div>
-                <p class="option-description">
-                    Prefer to implement yourself? Follow these 3 steps:
-                </p>
-                
-                <div class="steps">
-                    <div class="step">
-                        <div class="step-number">1</div>
-                        <h3>Clone the Repository</h3>
-                        <div class="code-block">
-                            <pre><code>git clone https://github.com/vkumar-dev/github-work-generator.git
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Clone the Repository</h4>
+                                <div class="code-block">
+                                    <pre><code>git clone https://github.com/vkumar-dev/github-work-generator.git
 cd github-work-generator</code></pre>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="step">
-                        <div class="step-number">2</div>
-                        <h3>Configure Settings</h3>
-                        <div class="code-block">
-                            <pre><code>cp config.example.sh config.sh
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Configure Settings</h4>
+                                <div class="code-block">
+                                    <pre><code>cp config.example.sh config.sh
 nano config.sh  # Edit your settings</code></pre>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="step">
-                        <div class="step-number">3</div>
-                        <h3>Run the Framework</h3>
-                        <div class="code-block">
-                            <pre><code>./workgenerator.sh                    # Terminal mode
-# OR
-USE_GUI=true ./workgenerator.sh       # GUI mode</code></pre>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Run the Framework</h4>
+                                <div class="code-block">
+                                    <pre><code>./workgenerator.sh              # Terminal mode
+USE_GUI=true ./workgenerator.sh   # GUI mode</code></pre>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
