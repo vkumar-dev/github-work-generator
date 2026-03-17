@@ -1,0 +1,31 @@
+# Runtime state files
+.workgenerator_config
+.pending_tasks.json
+.idea_*.txt
+.ideas_log.json
+workgenerator.log
+workgenerator-debug.log
+config.sh
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+temp.sh
+tmp/
+*.tmp

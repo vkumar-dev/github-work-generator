@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI-powered work generator framework - Analyze projects, generate ideas, automate execution">
+    <meta name="keywords" content="AI, automation, GitHub, productivity, framework, Python, shell">
+    <meta name="author" content="vkumar-dev">
+    
+    <title>AI Work Generator Framework</title>
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="AI Work Generator Framework">
+    <meta property="og:description" content="AI-powered automation framework that analyzes your projects, generates actionable ideas, and automates execution.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vkumar-dev.github.io/ai-work-generator-framework">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <span class="logo-icon">🚀</span>
+                <span class="logo-text">AI Work Generator</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#quickstart">Quick Start</a></li>
+                <li><a href="#docs">Docs</a></li>
+                <li><a href="#examples">Examples</a></li>
+                <li><a href="https://github.com/vkumar-dev/ai-work-generator-framework" target="_blank" class="btn-gh">GitHub</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="gradient-text">AI-Powered</span> Work Generator
+                </h1>
+                <p class="hero-subtitle">
+                    Analyze your GitHub projects, generate actionable ideas, and automate execution 
+                    with an intelligent framework built for developers and creators.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#quickstart" class="btn btn-primary">Get Started</a>
+                    <a href="https://github.com/vkumar-dev/ai-work-generator-framework" target="_blank" class="btn btn-secondary">
+                        View on GitHub
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-value">⚡ Fast</span>
+                        <span class="stat-label">Quick Setup</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">🔧 Flexible</span>
+                        <span class="stat-label">Any AI Tool</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">📦 Open</span>
+                        <span class="stat-label">MIT Licensed</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <span class="terminal-dot red"></span>
+                        <span class="terminal-dot yellow"></span>
+                        <span class="terminal-dot green"></span>
+                    </div>
+                    <div class="terminal-body">
+                        <pre><code><span class="cmd">$ git clone</span> https://github.com/vkumar-dev/ai-work-generator-framework
+<span class="cmd">$ cd</span> ai-work-generator-framework
+<span class="cmd">$ ./workgenerator.sh</span>
+
+<span class="success">✓</span> All dependencies OK
+<span class="info">→</span> Analyzing GitHub repositories...
+<span class="info">→</span> Generating idea #1...
+
+<span class="highlight">**PROJECT IDEA #1**</span>
+## Title: Auto-Documentation Bot
+## Description: AI bot that auto-generates README files
+## Impact: Save developers hours of writing time</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Why Use Work Generator?</h2>
+            <p class="section-subtitle">Automate your project discovery and execution workflow</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3>GitHub Analysis</h3>
+                    <p>Automatically analyze your repositories for opportunities using GitHub CLI</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💡</div>
+                    <h3>AI Idea Generation</h3>
+                    <p>Get context-aware project suggestions powered by your AI tool of choice</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🖥️</div>
+                    <h3>Multiple UI Options</h3>
+                    <p>Terminal, TUI, GUI (PyQt5), or web interface - choose your preference</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Automated Execution</h3>
+                    <p>Integrate with task runners like Ralph for hands-free implementation</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Traffic Analytics</h3>
+                    <p>Make data-driven decisions based on repository metrics and trends</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⏰</div>
+                    <h3>Smart Scheduling</h3>
+                    <p>Configurable rest periods between cycles for sustainable automation</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Customizable Prompts</h3>
+                    <p>Tailor AI behavior to your specific needs and workflow</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📝</div>
+                    <h3>State Persistence</h3>
+                    <p>Never lose progress with automatic state saving and recovery</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Start Section -->
+    <section id="quickstart" class="quickstart">
+        <div class="container">
+            <h2 class="section-title">Quick Start</h2>
+            <p class="section-subtitle">Get up and running in 3 steps</p>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Clone the Repository</h3>
+                    <div class="code-block">
+                        <pre><code>git clone https://github.com/vkumar-dev/ai-work-generator-framework.git
+cd ai-work-generator-framework</code></pre>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Install Dependencies</h3>
+                    <div class="code-block">
+                        <pre><code># Install GitHub CLI
+sudo apt install gh  # or brew install gh
+
+# Authenticate
+gh auth login
+
+# Optional: Python dependencies for GUI
+pip install -r requirements.txt</code></pre>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Configure & Run</h3>
+                    <div class="code-block">
+                        <pre><code># Copy config template
+cp config.example.sh config.sh
+
+# Edit with your settings
+nano config.sh
+
+# Run in terminal mode
+./workgenerator.sh
+
+# Or with GUI
+USE_GUI=true ./workgenerator.sh</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documentation Section -->
+    <section id="docs" class="docs">
+        <div class="container">
+            <h2 class="section-title">Documentation</h2>
+            <p class="section-subtitle">Everything you need to know</p>
+            
+            <div class="docs-grid">
+                <div class="doc-card">
+                    <h3>📖 Configuration</h3>
+                    <p>Learn how to customize goals, AI tools, and workflow settings</p>
+                    <a href="https://github.com/vkumar-dev/ai-work-generator-framework#configuration" target="_blank">Read More →</a>
+                </div>
+                <div class="doc-card">
+                    <h3>🎯 Usage Modes</h3>
+                    <p>Terminal, GUI, web interface, and single-run modes explained</p>
+                    <a href="https://github.com/vkumar-dev/ai-work-generator-framework#usage" target="_blank">Read More →</a>
+                </div>
+                <div class="doc-card">
+                    <h3>🧠 AI Prompts</h3>
+                    <p>Understand and customize the AI prompt templates</p>
+                    <a href="https://github.com/vkumar-dev/ai-work-generator-framework/tree/main/prompts" target="_blank">Read More →</a>
+                </div>
+                <div class="doc-card">
+                    <h3>🔧 Integration</h3>
+                    <p>Connect with Ralph loop, GitHub Actions, and other tools</p>
+                    <a href="https://github.com/vkumar-dev/ai-work-generator-framework#architecture" target="_blank">Read More →</a>
+                </div>
+            </div>
+            
+            <div class="doc-cta">
+                <a href="https://github.com/vkumar-dev/ai-work-generator-framework" target="_blank" class="btn btn-primary">
+                    View Full Documentation on GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Examples Section -->
+    <section id="examples" class="examples">
+        <div class="container">
+            <h2 class="section-title">Use Cases</h2>
+            <p class="section-subtitle">See how others are using the framework</p>
+            
+            <div class="examples-grid">
+                <div class="example-card">
+                    <div class="example-header">
+                        <span class="example-tag">Developer Tools</span>
+                    </div>
+                    <h3>Portfolio Optimization</h3>
+                    <p class="example-goal">Goal: Build tools that help developers save time</p>
+                    <ul class="example-list">
+                        <li>Analyzes repos for common pain points</li>
+                        <li>Suggests tooling improvements</li>
+                        <li>Generates implementation plans</li>
+                    </ul>
+                </div>
+                <div class="example-card">
+                    <div class="example-header">
+                        <span class="example-tag">Content Creation</span>
+                    </div>
+                    <h3>Technical Content Pipeline</h3>
+                    <p class="example-goal">Goal: Create educational content about emerging tech</p>
+                    <ul class="example-list">
+                        <li>Identifies trending topics in repos</li>
+                        <li>Suggests article/video topics</li>
+                        <li>Creates content outlines</li>
+                    </ul>
+                </div>
+                <div class="example-card">
+                    <div class="example-header">
+                        <span class="example-tag">Product Development</span>
+                    </div>
+                    <h3>SaaS Product Builder</h3>
+                    <p class="example-goal">Goal: Launch revenue-generating products</p>
+                    <ul class="example-list">
+                        <li>Analyzes market gaps via GitHub trends</li>
+                        <li>Suggests product ideas with MVP scope</li>
+                        <li>Creates roadmaps for execution</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">🚀</span>
+                    <span class="logo-text">AI Work Generator Framework</span>
+                    <p>AI-powered automation for developers and creators</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <a href="#features">Features</a>
+                        <a href="#quickstart">Quick Start</a>
+                        <a href="#examples">Examples</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <a href="https://github.com/vkumar-dev/ai-work-generator-framework" target="_blank">Documentation</a>
+                        <a href="https://github.com/vkumar-dev/ai-work-generator-framework/issues" target="_blank">Issues</a>
+                        <a href="https://github.com/vkumar-dev/ai-work-generator-framework/discussions" target="_blank">Discussions</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <a href="https://github.com/vkumar-dev/ai-work-generator-framework/blob/main/LICENSE" target="_blank">License</a>
+                        <a href="https://github.com/vkumar-dev" target="_blank">Privacy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Built with ❤️ using AI + GitHub</p>
+                <p>Licensed under <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
